@@ -1,13 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    
-    <h1>welcome to Yoputune</h1>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #parent {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 10 px;
+        justify-content: space-around;
+        padding-top: 20px;
+    }
+
+    #nav {
+        /* height: 30px; */
+        /* background-color: #202020; */
+        display: flex;
+justify-content: space-between;
+        /* list-style: none; */
+        align-items: center;
+        width: 100%;
+        border-bottom: 1px solid rgb(237 237 237);
+        height: 50px;
+        padding: 5px;
+    }
+
+    #nav>div {
+        /* border: 2px solid red; */
+    }
+
+    #left {
+        display: flex;
+        width: max-content;
+        /* justify-content: center; */
+        align-items: center;
+        padding-left: 20px;
+        height: 30px;
+
+
+    }
+
+
+
+
+    #left>div:nth-child(1) {
+        height: 67%;
+        width: 25px;
+        /* background-color: blueviolet; */
+
+    }
+
+    #left div:nth-child(1) img {
+        width: 100%;
+        height: 100%;
+        /* object-fit: contain; */
+    }
+
+    #left div:nth-child(2) {
+        height: 100%;
+        width: 150px;
+        padding: 0 20px;
+        /* background-color: blue; */
+        margin-top: -4px;
+    }
+
+    #left div:nth-child(2) img {
+        height: 100%;
+        width: 100%;
+        /* object-fit: contain; */
+    }
+
+    #middle {
+        display: flex;
+        width: 40%;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+
+    }
+
+    #middle input {
+        width: 75%;
+        height: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid rgb(213 210 210);
+        font-size: 18px;
+        border-right: none;
+        outline-color: #2886ff;
+        outline-width: 0ch;
+
+    }
+
+    #middle button {
+        width: 8.5%;
+        height: 100%;
+        /* padding: 10px; */
+        box-sizing: border-box;
+        border: 1px solid rgb(213 210 210);
+        background-color: #f8f8f8;
+
+    }
+
+    #middle button:nth-child(3) {
+        width: 6%;
+        height: 100%;
+        margin-left: 1%;
+        box-sizing: border-box;
+
+        background-color: #f9f9f9;
+        border-radius: 50%;
+        border: none;
+    }
+
+    #middle button img {
+        height: 50%;
+    }
+
+    #middle button:nth-child(3) img:hover {
+        height: 75%;
+    }
+
+    #right {
+        display: flex;
+        width: max-content;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        column-gap: 30px;    
+        padding-right: 30px;    
+
+    }
+
+
+
+
+    #grid {
+        /* background-color: blueviolet; */
+        height: 20px;
+        width: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 2px;
+        column-gap: 2px;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+
+    }
+
+    #grid div {
+        width: 5px;
+        height: 5px;
+        border: 1px solid black;
+        box-sizing: border-box;
+        border-radius: 2px;
+    }
+
+    #right>div:nth-child(2) {
+        height: 18px;
+        width: 15px
+            /* background-color: blueviolet; */
+    }
+
+    #right>div:nth-child(2) img {
+        height: 100%;
+        width: 100%;
+
+    }
+
+    #right button {
+        width: 105px;
+        height: 41px;
+        border: 2px solid #2886ff;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: white;
+        /* margin: 30px; */
+        padding: 4px;
+        font-weight: bold;
+        color: #4294ff;
+
+    }
+
+    #right button img {
+        width: 20%;
+        /* height: 100%; */
+        /* object-fit: contain; */
+
+
+
+
+    }
+</style>
+
+<body onload="youtube()">
+
+    <!-- <h1>welcome to Yoputune</h1> -->
+    <div id="nav">
+
+        <div id="left">
+            <div><img src="/icons/menu.png" alt=""></div>
+            <div><img src="/icons/you.png.png" alt=""></div>
+        </div>
+        <div id="middle">
+            <input id="input" type="text" placeholder="Search">
+            <button onclick="youtube()" id="btn"><img src="/icons/search.png" alt=""></button>
+            <button><img src="/icons/microphone.png" alt=""></button>
+        </div>
+        <div id="right">
+            <div id="grid">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div><img src="/icons/dots.png" alt=""></div>
+            <button>
+                <img src="/icons/user.png" alt="">
+                SIGN IN
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+    <div id="parent">
+
+    </div>
 </body>
+
 </html>
+
+<script src="index.js"></script>
